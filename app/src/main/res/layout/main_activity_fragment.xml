@@ -3,13 +3,13 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:background="@drawable/pic_road"
-    android:layout_height="wrap_content">
+    android:layout_height="match_parent">
 
 
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:id="@+id/userDetailRecyclerView"
         android:scrollbars="vertical">
 
