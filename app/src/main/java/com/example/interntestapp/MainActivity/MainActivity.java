@@ -6,6 +6,8 @@ import android.os.Bundle;
 
 import com.example.interntestapp.MainActivityFragment;
 import com.example.interntestapp.R;
+import com.example.interntestapp.SignUpFragment;
+import com.example.interntestapp.UserListAdapter;
 import com.example.interntestapp.Util.BaseActivity;
 
 public class MainActivity extends BaseActivity {
@@ -25,6 +27,13 @@ public class MainActivity extends BaseActivity {
         }
 
         addFragmentToActivity(manager,fragment,R.id.root_activity_list,MAIN_FRAG);
+
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+
 
     }
 }

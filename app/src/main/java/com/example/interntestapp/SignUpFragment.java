@@ -1,5 +1,6 @@
 package com.example.interntestapp;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -36,22 +37,26 @@ public class SignUpFragment extends Fragment implements Validator.ValidationList
 
     private static final String TAG = "SignUpFragment";
 
+
     @NotEmpty
     @Length(min = 4)
-    @BindView(R.id.nameEditText)
-    EditText nameEt;
+    @BindView(R.id.nameEditText) EditText nameEt;
+
 
     @NotEmpty
     @Length(min = 10)
-    @BindView(R.id.addressEditText) EditText addressEt;
+    @BindView(R.id.addressEditText)   EditText addressEt;
+
 
     @NotEmpty
     @Length(min = 10)
-    @BindView(R.id.phoneNumberEditText) EditText phoneNumberEt;
+    @BindView(R.id.phoneNumberEditText)   EditText phoneNumberEt;
+
 
     @NotEmpty
     @Email
-    @BindView(R.id.emeditText) EditText emailEt;
+    @BindView(R.id.emeditText)   EditText emailEt;
+
 
     @NotEmpty
     @Password(min = 8, scheme = Password.Scheme.ALPHA_NUMERIC_MIXED_CASE)
@@ -126,13 +131,12 @@ public class SignUpFragment extends Fragment implements Validator.ValidationList
                 phoneNumberStr = phoneNumberEt.getText().toString();
                 emailStr = emailEt.getText().toString();
                 passwordStr = passwordEt.getText().toString();
-               prevId++;
-               currentId = prevId;
+
                 validator.validate();
                 if(validated){
 
                     UserDetailModel userDetailModel = new UserDetailModel(
-                           prevId,nameStr,phoneNumberStr,addressStr,emailStr,passwordStr
+                           nameStr,phoneNumberStr,addressStr,emailStr,passwordStr
                     );
                     userDetailViewModel.addNewUserDetailToDatabase(userDetailModel);
 
@@ -189,5 +193,15 @@ public class SignUpFragment extends Fragment implements Validator.ValidationList
                 Toast.makeText(getActivity(), message, Toast.LENGTH_SHORT).show();
             }
         }
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        nameEt.getText().clear();
+        addressEt.getText().clear();
+        phoneNumberEt.getText().clear();
+        emailEt.getText().clear();
+        passwordEt.getText().clear();
     }
 }

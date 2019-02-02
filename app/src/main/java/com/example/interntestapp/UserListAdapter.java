@@ -38,6 +38,9 @@ public class UserListAdapter extends RecyclerView.Adapter<UserListAdapter.UserLi
         if(list!=null){
             if(list.size()>0){
                 holder.nameTextView.setText(list.get(position).getName());
+                holder.addressTv.setText("Address: "+list.get(position).getAddress());
+                holder.emailTv.setText("Email: "+list.get(position).getEmailAddress());
+                holder.phoneNumberTv.setText("Contact Number: +91"+list.get(position).getPhoneNumber());
             }
         }
 
@@ -48,12 +51,15 @@ public class UserListAdapter extends RecyclerView.Adapter<UserListAdapter.UserLi
         return list.size();
     }
 
-    class UserListAdapterViewHolder extends RecyclerView.ViewHolder {
-        private TextView nameTextView;
+     class UserListAdapterViewHolder extends RecyclerView.ViewHolder {
+        public  TextView nameTextView,phoneNumberTv,emailTv,addressTv;
         public UserListAdapterViewHolder(@NonNull View itemView)
         {
             super(itemView);
             nameTextView = itemView.findViewById(R.id.nameTextView);
+            phoneNumberTv = itemView.findViewById(R.id.phoneNumberTextView);
+            emailTv = itemView.findViewById(R.id.emailTextview);
+            addressTv = itemView.findViewById(R.id.addressTextView);
         }
     }
 }

@@ -9,7 +9,7 @@ import androidx.room.PrimaryKey;
 @Entity
 public class UserDetailModel implements Parcelable {
 
-    @PrimaryKey
+    @PrimaryKey(autoGenerate = true)
     int id;
     String name;
     String phoneNumber;
@@ -18,8 +18,8 @@ public class UserDetailModel implements Parcelable {
     String password;
 
 
-    public UserDetailModel(int id, String name, String phoneNumber, String address, String emailAddress, String password) {
-        this.id = id;
+    public UserDetailModel(String name, String phoneNumber, String address, String emailAddress, String password) {
+
         this.name = name;
         this.phoneNumber = phoneNumber;
         this.address = address;

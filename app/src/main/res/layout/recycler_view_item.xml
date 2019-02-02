@@ -13,18 +13,69 @@
         app:cardCornerRadius="4dp"
         android:layout_marginBottom="10dp"
         android:layout_marginTop="10dp"
+
         android:layout_marginEnd="10dp"
         android:layout_marginRight="10dp"
         android:layout_marginStart="10dp">
 
-        <TextView
+
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="Kartik"
-            android:textSize="40dp"
-            android:id="@+id/nameTextView"
-            android:textAlignment="center"
-            android:layout_marginTop="50dp"/>
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Kartik Mishra"
+                android:textSize="40dp"
+                android:textColor="#172"
+                android:id="@+id/nameTextView"
+                android:textAlignment="center"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="50dp"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/nameTextView"
+                android:textSize="20sp"
+                android:textColor="#ef9a9a"
+                android:id="@+id/addressTextView"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="Address : 4649/114-115,Street No-5,New Modern shahdara Delhi -32"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Contact No : 8285444490"
+                android:layout_below="@+id/addressTextView"
+                android:textSize="20sp"
+                android:textColor="#f06292"
+                android:id="@+id/phoneNumberTextView"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Email : kartikmishra04@gmail.com"
+                android:textSize="20sp"
+                android:id="@+id/emailTextview"
+                android:layout_below="@id/phoneNumberTextView"
+                android:layout_marginStart="10dp"
+                android:textColor="#ce93d8"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="10dp"/>
+
+
+        </RelativeLayout>
+
+
 
     </androidx.cardview.widget.CardView>
 
