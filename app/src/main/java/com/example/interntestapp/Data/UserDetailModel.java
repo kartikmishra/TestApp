@@ -18,8 +18,7 @@ public class UserDetailModel implements Parcelable {
     String password;
 
 
-    public UserDetailModel(String name, String phoneNumber, String address, String emailAddress, String password) {
-
+    public UserDetailModel( String name, String phoneNumber, String address, String emailAddress, String password) {
         this.name = name;
         this.phoneNumber = phoneNumber;
         this.address = address;

@@ -6,6 +6,8 @@ import com.example.interntestapp.R;
 import com.example.interntestapp.SignUpFragment;
 import com.example.interntestapp.Util.BaseActivity;
 
+import java.util.Objects;
+
 import androidx.fragment.app.FragmentManager;
 
 public class SignUpActivity extends BaseActivity {
@@ -18,6 +20,7 @@ public class SignUpActivity extends BaseActivity {
         setContentView(R.layout.activity_sign_up);
 
 
+        Objects.requireNonNull(getSupportActionBar()).hide();
         FragmentManager manager = getSupportFragmentManager();
 
         SignUpFragment fragment = (SignUpFragment) manager.findFragmentByTag(SIGN_UP_FRAG);

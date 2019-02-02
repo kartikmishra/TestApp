@@ -143,6 +143,4 @@ public class MainActivityFragment extends Fragment {
         };
         return simpleItemTouchCallback;
     }
-
-
 }

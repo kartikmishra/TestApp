@@ -51,8 +51,8 @@ public class UserListAdapter extends RecyclerView.Adapter<UserListAdapter.UserLi
         return list.size();
     }
 
-     class UserListAdapterViewHolder extends RecyclerView.ViewHolder {
-        public  TextView nameTextView,phoneNumberTv,emailTv,addressTv;
+    class UserListAdapterViewHolder extends RecyclerView.ViewHolder {
+        private TextView nameTextView,phoneNumberTv,emailTv,addressTv;
         public UserListAdapterViewHolder(@NonNull View itemView)
         {
             super(itemView);

@@ -3,7 +3,7 @@
     <string name="enter_your_name_here">Username</string>
     <string name="enter_your_address_here">Address</string>
     <string name="enter_your_email_address_here">Email</string>
-    <string name="enter_your_contact_number_here">Contact Number</string>
+    <string name="enter_your_contact_number_here">Contact No</string>
     <string name="enter_your_password_here">Password</string>
     <string name="sign_up_btn_text">Sign Up</string>
 </resources>
